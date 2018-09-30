@@ -1,0 +1,116 @@
+{
+  "name": "Kenneth Rey Tamis",
+  "title": "Web Developer",
+  "aboutme": "Creative CV is a HTML resume template for professionals. Built with Bootstrap 4, Now UI Kit and FontAwesome, this modern and responsive design template is perfect to showcase your portfolio, skills and experience",
+  "profileImage": "https://image.ibb.co/d4EAuz/Tamis_Kenneth_Rey.jpg",
+  "pageOption": {
+    "backgroundImageTop": "https://image.ibb.co/gWS27K/photo_1517694712202_14dd9538aa97.jpg",
+    "backgroundImageBot": "https://image.ibb.co/fetgZK/laptop.jpg"
+  },
+  "links": [
+    {
+      "title": "Follow me on Facebook",
+      "icon": "fa fa-facebook",
+      "link": "https://www.facebook.com/iamkennethreyt"
+    },
+    {
+      "title": "Follow me on Github",
+      "icon": "fa fa-github",
+      "link": "https://www.github.com/iamkennethreyt"
+    },
+    {
+      "title": "Follow me on Instagram",
+      "icon": "fa fa-instagram",
+      "link": "https://www.instagram.com/iamkennethreyt"
+    },
+    {
+      "title": "Follow me on Linkedin",
+      "icon": "fa fa-linkedin",
+      "link": "https://www.linkedin.com/in/iamkennethreyt"
+    }
+  ],
+  "basicInfo": [
+    {
+      "title": "EMAIL",
+      "value": "keba.tamis@swu.edu.ph"
+    },
+    {
+      "title": "phone",
+      "value": "+6345 702 0203"
+    },
+    {
+      "title": "address",
+      "value": "94-D Urgello St., Sambag 1, Cebu City, 6000"
+    }
+  ],
+  "workExperience": [
+    {
+      "years": "June - September 2018",
+      "company": "Southwestern University PHINMA",
+      "designation": "Software Engineer",
+      "details": "Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna quam iaculis, tristique sapien taciti mollis interdum sagittis libero nunc inceptos tellus, hendrerit vel eleifend primis lectus quisque cubilia sed mauris. Lacinia porta vestibulum diam integer quisque eros pulvinar curae, curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium molestie ultricies sollicitudin dui."
+    },
+    {
+      "years": "March - May 2018",
+      "company": "Proweaver Inc.",
+      "designation": "Web Developer",
+      "details": "Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna quam iaculis, tristique sapien taciti mollis interdum sagittis libero nunc inceptos tellus, hendrerit vel eleifend primis lectus quisque cubilia sed mauris. Lacinia porta vestibulum diam integer quisque eros pulvinar curae, curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium molestie ultricies sollicitudin dui."
+    },
+    {
+      "years": "2017-2018",
+      "company": "Southwestern University PHINMA",
+      "designation": "Intern",
+      "details": "Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna quam iaculis, tristique sapien taciti mollis interdum sagittis libero nunc inceptos tellus, hendrerit vel eleifend primis lectus quisque cubilia sed mauris. Lacinia porta vestibulum diam integer quisque eros pulvinar curae, curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium molestie ultricies sollicitudin dui."
+    }
+  ],
+  "education": [
+    {
+      "years": "2013-2018",
+      "level": "Bachelor's Degree",
+      "school": "Southwestern University PHINMA",
+      "address": "Cebu City",
+      "details": "Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna quam iaculis, tristique sapien taciti mollis interdum sagittis libero nunc inceptos tellus, hendrerit vel eleifend primis lectus quisque cubilia sed mauris. Lacinia porta vestibulum diam integer quisque eros pulvinar curae, curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium molestie ultricies sollicitudin dui."
+    },
+    {
+      "years": "2007-2011",
+      "level": "Secondary",
+      "school": "Bantayn Southern Institute",
+      "address": "Bantayan Cebu",
+      "details": "Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna quam iaculis, tristique sapien taciti mollis interdum sagittis libero nunc inceptos tellus, hendrerit vel eleifend primis lectus quisque cubilia sed mauris. Lacinia porta vestibulum diam integer quisque eros pulvinar curae, curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium molestie ultricies sollicitudin dui."
+    }
+  ],
+  "skills": [
+    {
+      "skills": "javascript",
+      "percent": "75"
+    },
+    {
+      "skills": "ReactJs",
+      "percent": "75"
+    },
+    {
+      "skills": "Css & html",
+      "percent": "75"
+    },
+    {
+      "skills": "photoshop",
+      "percent": "71"
+    },
+    {
+      "skills": "react-md",
+      "percent": "50"
+    },
+    {
+      "skills": "firebase",
+      "percent": "50"
+    },
+    {
+      "skills": "rest api",
+      "percent": "50"
+    },
+    {
+      "skills": "wordpress",
+      "percent": "48"
+    }
+  ]
+}

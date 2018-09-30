@@ -1,23 +1,34 @@
 import React, { Component } from "react";
 import "./App.css";
+import mydata from "./data.json";
 
 class App extends Component {
+  state = {
+    data: {}
+  };
+  componentWillMount() {
+    // fetch("https://api.jsonbin.io/b/5bb0d9f4a97c597b3c5be257/1")
+    //   .then(res => res.json())
+    //   .then(data => this.setState({ data }));
+
+    this.setState({ data: mydata });
+  }
   render() {
     return (
       <div id="top">
         <header>
-          <div class="profile-page sidebar-collapse">
+          <div className="profile-page sidebar-collapse">
             <nav
-              class="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary"
+              className="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary"
               color-on-scroll="400"
             >
-              <div class="container">
-                <div class="navbar-translate">
-                  <a class="navbar-brand" href="#" rel="tooltip">
-                    Creative CV
+              <div className="container">
+                <div className="navbar-translate">
+                  <a className="navbar-brand" rel="tooltip">
+                    Profile
                   </a>
                   <button
-                    class="navbar-toggler navbar-toggler"
+                    className="navbar-toggler navbar-toggler"
                     type="button"
                     data-toggle="collapse"
                     data-target="#navigation"
@@ -25,34 +36,34 @@ class App extends Component {
                     aria-expanded="false"
                     aria-label="Toggle navigation"
                   >
-                    <span class="navbar-toggler-bar bar1" />
-                    <span class="navbar-toggler-bar bar2" />
-                    <span class="navbar-toggler-bar bar3" />
+                    <span className="navbar-toggler-bar bar1" />
+                    <span className="navbar-toggler-bar bar2" />
+                    <span className="navbar-toggler-bar bar3" />
                   </button>
                 </div>
                 <div
-                  class="collapse navbar-collapse justify-content-end"
+                  className="collapse navbar-collapse justify-content-end"
                   id="navigation"
                 >
-                  <ul class="navbar-nav">
-                    <li class="nav-item">
-                      <a class="nav-link smooth-scroll" href="#about">
+                  <ul className="navbar-nav">
+                    <li className="nav-item">
+                      <a className="nav-link smooth-scroll" href="#about">
                         About
                       </a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link smooth-scroll" href="#skill">
+                    <li className="nav-item">
+                      <a className="nav-link smooth-scroll" href="#skill">
                         Skills
                       </a>
                     </li>
 
-                    <li class="nav-item">
-                      <a class="nav-link smooth-scroll" href="#experience">
+                    <li className="nav-item">
+                      <a className="nav-link smooth-scroll" href="#experience">
                         Experience
                       </a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link smooth-scroll" href="#contact">
+                    <li className="nav-item">
+                      <a className="nav-link smooth-scroll" href="#contact">
                         Contact
                       </a>
                     </li>
@@ -62,35 +73,36 @@ class App extends Component {
             </nav>
           </div>
         </header>
-        <div class="page-content">
+        <div className="page-content">
           <div>
-            <div class="profile-page">
-              <div class="wrapper">
-                <div class="page-header page-header-small" filter-color="green">
+            <div className="profile-page">
+              <div className="wrapper">
+                <div
+                  className="page-header page-header-small"
+                  filter-color="green"
+                >
                   <div
-                    class="page-header-image"
+                    className="page-header-image"
                     data-parallax="true"
                     style={{
-                      "background-image":
-                        " url('https://image.ibb.co/gWS27K/photo_1517694712202_14dd9538aa97.jpg')"
+                      backgroundImage:
+                        "url('https://image.ibb.co/gWS27K/photo_1517694712202_14dd9538aa97.jpg')"
                     }}
                   />
-                  <div class="container">
-                    <div class="content-center">
-                      <div class="cc-profile-image">
-                        <a href="#">
+                  <div className="container">
+                    <div className="content-center">
+                      <div className="cc-profile-image">
+                        <a>
                           <img
-                            src="https://image.ibb.co/d4EAuz/Tamis_Kenneth_Rey.jpg"
-                            alt="Image"
+                            src={this.state.data.profileImage}
+                            alt="Kenneth Rey"
                           />
                         </a>
                       </div>
-                      <div class="h2 title">Anthony Barnett</div>
-                      <p class="category text-white">
-                        Web Developer, Graphic Designer, Photographer
-                      </p>
+                      <div className="h2 title">{this.state.data.name}</div>
+                      <p className="category text-white" />
                       <a
-                        class="btn btn-primary smooth-scroll mr-2"
+                        className="btn btn-primary smooth-scroll mr-2"
                         href="#contact"
                         data-aos="zoom-in"
                         data-aos-anchor="data-aos-anchor"
@@ -98,8 +110,7 @@ class App extends Component {
                         Hire Me
                       </a>
                       <a
-                        class="btn btn-primary"
-                        href="#"
+                        className="btn btn-primary"
                         data-aos="zoom-in"
                         data-aos-anchor="data-aos-anchor"
                       >
@@ -107,507 +118,209 @@ class App extends Component {
                       </a>
                     </div>
                   </div>
-                  <div class="section">
-                    <div class="container">
-                      <div class="button-container">
-                        <a
-                          class="btn btn-primary btn-round btn-lg btn-icon m-2"
-                          href="#"
-                          rel="tooltip"
-                          title="Follow me on Facebook"
-                        >
-                          <i class="fa fa-facebook" />
-                        </a>
-                        <a
-                          class="btn btn-primary btn-round btn-lg btn-icon m-2"
-                          href="#"
-                          rel="tooltip"
-                          title="Follow me on Twitter"
-                        >
-                          <i class="fa fa-twitter" />
-                        </a>
-                        <a
-                          class="btn btn-primary btn-round btn-lg btn-icon m-2"
-                          href="#"
-                          rel="tooltip"
-                          title="Follow me on Google+"
-                        >
-                          <i class="fa fa-google-plus" />
-                        </a>
-                        <a
-                          class="btn btn-primary btn-round btn-lg btn-icon m-2"
-                          href="#"
-                          rel="tooltip"
-                          title="Follow me on Instagram"
-                        >
-                          <i class="fa fa-instagram" />
-                        </a>
+                  <div className="section">
+                    <div className="container">
+                      <div className="button-container">
+                        {this.state.data.links.map((link, i) => {
+                          return (
+                            <a
+                              key={i}
+                              className="btn btn-primary btn-round btn-lg btn-icon m-2"
+                              href={`${link.link}`}
+                              rel="tooltip"
+                              title={`${link.title}`}
+                            >
+                              <i className={`${link.icon}`} />
+                            </a>
+                          );
+                        })}
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="section" id="about">
-              <div class="container">
-                <div class="card" data-aos="fade-up" data-aos-offset="10">
-                  <div class="row">
-                    <div class="col-lg-6 col-md-12">
-                      <div class="card-body">
-                        <div class="h4 mt-0 title">About</div>
+            <div className="section" id="about">
+              <div className="container">
+                <div className="card" data-aos="fade-up" data-aos-offset="10">
+                  <div className="row">
+                    <div className="col-lg-6 col-md-12">
+                      <div className="card-body">
+                        <div className="h4 mt-0 title">About</div>
                         <p>
-                          Hello! I am Anthony Barnett. Web Developer, Graphic
-                          Designer and Photographer.
+                          Hello! I am {this.state.data.name}. Web Developer,
+                          Graphic Designer and Photographer.
                         </p>
-                        <p>
-                          Creative CV is a HTML resume template for
-                          professionals. Built with Bootstrap 4, Now UI Kit and
-                          FontAwesome, this modern and responsive design
-                          template is perfect to showcase your portfolio, skills
-                          and experience.{" "}
-                          <a
-                            href="https://templateflip.com/templates/creative-cv/"
-                            target="_blank"
-                          >
-                            Learn More
-                          </a>
-                        </p>
+                        <p>{this.state.data.aboutme}</p>
                       </div>
                     </div>
-                    <div class="col-lg-6 col-md-12">
-                      <div class="card-body">
-                        <div class="h4 mt-0 title">Basic Information</div>
-                        <div class="row">
-                          <div class="col-sm-4">
-                            <strong class="text-uppercase">Age:</strong>
-                          </div>
-                          <div class="col-sm-8">24</div>
-                        </div>
-                        <div class="row mt-3">
-                          <div class="col-sm-4">
-                            <strong class="text-uppercase">Email:</strong>
-                          </div>
-                          <div class="col-sm-8">anthony@company.com</div>
-                        </div>
-                        <div class="row mt-3">
-                          <div class="col-sm-4">
-                            <strong class="text-uppercase">Phone:</strong>
-                          </div>
-                          <div class="col-sm-8">+1718-111-0011</div>
-                        </div>
-                        <div class="row mt-3">
-                          <div class="col-sm-4">
-                            <strong class="text-uppercase">Address:</strong>
-                          </div>
-                          <div class="col-sm-8">
-                            140, City Center, New York, U.S.A
-                          </div>
-                        </div>
-                        <div class="row mt-3">
-                          <div class="col-sm-4">
-                            <strong class="text-uppercase">Language:</strong>
-                          </div>
-                          <div class="col-sm-8">English, German, French</div>
-                        </div>
+                    <div className="col-lg-6 col-md-12">
+                      <div className="card-body">
+                        <div className="h4 mt-0 title">Basic Information</div>
+                        {this.state.data.basicInfo.map((info, i) => {
+                          return (
+                            <div className="row mt-3" key={i}>
+                              <div className="col-sm-4">
+                                <strong className="text-uppercase">
+                                  {info.title}
+                                </strong>
+                              </div>
+                              <div className="col-sm-8">{info.value}</div>
+                            </div>
+                          );
+                        })}
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="section" id="skill">
-              <div class="container">
-                <div class="h4 text-center mb-4 title">Professional Skills</div>
+            <div className="section" id="skill">
+              <div className="container">
+                <div className="h4 text-center mb-4 title">
+                  Professional Skills
+                </div>
                 <div
-                  class="card"
+                  className="card"
                   data-aos="fade-up"
                   data-aos-anchor-placement="top-bottom"
                 >
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="progress-container progress-primary">
-                          <span class="progress-badge">HTML</span>
-                          <div class="progress">
-                            <div
-                              class="progress-bar progress-bar-primary"
-                              data-aos="progress-full"
-                              data-aos-offset="10"
-                              data-aos-duration="2000"
-                              role="progressbar"
-                              aria-valuenow="60"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                              style={{ width: "80%" }}
-                            />
-                            <span class="progress-value">80%</span>
+                  <div className="card-body">
+                    <div className="row">
+                      {this.state.data.skills.map((skill, i) => {
+                        return (
+                          <div className="col-md-6" key={i}>
+                            <div className="progress-container progress-primary">
+                              <span className="progress-badge">
+                                {skill.skills}
+                              </span>
+                              <div className="progress">
+                                <div
+                                  className="progress-bar progress-bar-primary"
+                                  data-aos="progress-full"
+                                  data-aos-offset="10"
+                                  data-aos-duration="2000"
+                                  role="progressbar"
+                                  aria-valuenow="60"
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                                  style={{ width: `${skill.percent}%` }}
+                                />
+                                <span className="progress-value">
+                                  {`${skill.percent}%`}
+                                </span>
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="progress-container progress-primary">
-                          <span class="progress-badge">CSS</span>
-                          <div class="progress">
-                            <div
-                              class="progress-bar progress-bar-primary"
-                              data-aos="progress-full"
-                              data-aos-offset="10"
-                              data-aos-duration="2000"
-                              role="progressbar"
-                              aria-valuenow="60"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                              style={{ width: "75%" }}
-                            />
-                            <span class="progress-value">75%</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="progress-container progress-primary">
-                          <span class="progress-badge">JavaScript</span>
-                          <div class="progress">
-                            <div
-                              class="progress-bar progress-bar-primary"
-                              data-aos="progress-full"
-                              data-aos-offset="10"
-                              data-aos-duration="2000"
-                              role="progressbar"
-                              aria-valuenow="60"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                              style={{ width: " 60%" }}
-                            />
-                            <span class="progress-value">60%</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="progress-container progress-primary">
-                          <span class="progress-badge">SASS</span>
-                          <div class="progress">
-                            <div
-                              class="progress-bar progress-bar-primary"
-                              data-aos="progress-full"
-                              data-aos-offset="10"
-                              data-aos-duration="2000"
-                              role="progressbar"
-                              aria-valuenow="60"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                              style={{ width: " 60%" }}
-                            />
-                            <span class="progress-value">60%</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="progress-container progress-primary">
-                          <span class="progress-badge">Bootstrap</span>
-                          <div class="progress">
-                            <div
-                              class="progress-bar progress-bar-primary"
-                              data-aos="progress-full"
-                              data-aos-offset="10"
-                              data-aos-duration="2000"
-                              role="progressbar"
-                              aria-valuenow="60"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                              style={{ width: " 75%" }}
-                            />
-                            <span class="progress-value">75%</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="progress-container progress-primary">
-                          <span class="progress-badge">Photoshop</span>
-                          <div class="progress">
-                            <div
-                              class="progress-bar progress-bar-primary"
-                              data-aos="progress-full"
-                              data-aos-offset="10"
-                              data-aos-duration="2000"
-                              role="progressbar"
-                              aria-valuenow="60"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                              style={{ width: "70%" }}
-                            />
-                            <span class="progress-value">70%</span>
-                          </div>
-                        </div>
-                      </div>
+                        );
+                      })}
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="section" id="experience">
-              <div class="container cc-experience">
-                <div class="h4 text-center mb-4 title">Work Experience</div>
-                <div class="card">
-                  <div class="row">
-                    <div
-                      class="col-md-3 bg-primary"
-                      data-aos="fade-right"
-                      data-aos-offset="50"
-                      data-aos-duration="500"
-                    >
-                      <div class="card-body cc-experience-header">
-                        <p>March 2016 - Present</p>
-                        <div class="h5">CreativeM</div>
+            <div className="section" id="experience">
+              <div className="container cc-experience">
+                <div className="h4 text-center mb-4 title">Work Experience</div>
+                {this.state.data.workExperience.map((exp, i) => {
+                  return (
+                    <div className="card" key={i}>
+                      <div className="row">
+                        <div
+                          className="col-md-3 bg-primary"
+                          data-aos="fade-right"
+                          data-aos-offset="50"
+                          data-aos-duration="500"
+                        >
+                          <div className="card-body cc-experience-header">
+                            <p>{exp.years}</p>
+                            <div className="h5">{exp.company}</div>
+                          </div>
+                        </div>
+                        <div
+                          className="col-md-9"
+                          data-aos="fade-left"
+                          data-aos-offset="50"
+                          data-aos-duration="500"
+                        >
+                          <div className="card-body">
+                            <div className="h5">{exp.designation}</div>
+                            <p>{exp.details}</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div
-                      class="col-md-9"
-                      data-aos="fade-left"
-                      data-aos-offset="50"
-                      data-aos-duration="500"
-                    >
-                      <div class="card-body">
-                        <div class="h5">Front End Developer</div>
-                        <p>
-                          Euismod massa scelerisque suspendisse fermentum
-                          habitant vitae ullamcorper magna quam iaculis,
-                          tristique sapien taciti mollis interdum sagittis
-                          libero nunc inceptos tellus, hendrerit vel eleifend
-                          primis lectus quisque cubilia sed mauris. Lacinia
-                          porta vestibulum diam integer quisque eros pulvinar
-                          curae, curabitur feugiat arcu vivamus parturient
-                          aliquet laoreet at, eu etiam pretium molestie
-                          ultricies sollicitudin dui.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="row">
-                    <div
-                      class="col-md-3 bg-primary"
-                      data-aos="fade-right"
-                      data-aos-offset="50"
-                      data-aos-duration="500"
-                    >
-                      <div class="card-body cc-experience-header">
-                        <p>April 2014 - March 2016</p>
-                        <div class="h5">WebNote</div>
-                      </div>
-                    </div>
-                    <div
-                      class="col-md-9"
-                      data-aos="fade-left"
-                      data-aos-offset="50"
-                      data-aos-duration="500"
-                    >
-                      <div class="card-body">
-                        <div class="h5">Web Developer</div>
-                        <p>
-                          Euismod massa scelerisque suspendisse fermentum
-                          habitant vitae ullamcorper magna quam iaculis,
-                          tristique sapien taciti mollis interdum sagittis
-                          libero nunc inceptos tellus, hendrerit vel eleifend
-                          primis lectus quisque cubilia sed mauris. Lacinia
-                          porta vestibulum diam integer quisque eros pulvinar
-                          curae, curabitur feugiat arcu vivamus parturient
-                          aliquet laoreet at, eu etiam pretium molestie
-                          ultricies sollicitudin dui.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="row">
-                    <div
-                      class="col-md-3 bg-primary"
-                      data-aos="fade-right"
-                      data-aos-offset="50"
-                      data-aos-duration="500"
-                    >
-                      <div class="card-body cc-experience-header">
-                        <p>April 2013 - February 2014</p>
-                        <div class="h5">WEBM</div>
-                      </div>
-                    </div>
-                    <div
-                      class="col-md-9"
-                      data-aos="fade-left"
-                      data-aos-offset="50"
-                      data-aos-duration="500"
-                    >
-                      <div class="card-body">
-                        <div class="h5">Intern</div>
-                        <p>
-                          Euismod massa scelerisque suspendisse fermentum
-                          habitant vitae ullamcorper magna quam iaculis,
-                          tristique sapien taciti mollis interdum sagittis
-                          libero nunc inceptos tellus, hendrerit vel eleifend
-                          primis lectus quisque cubilia sed mauris. Lacinia
-                          porta vestibulum diam integer quisque eros pulvinar
-                          curae, curabitur feugiat arcu vivamus parturient
-                          aliquet laoreet at, eu etiam pretium molestie
-                          ultricies sollicitudin dui.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                  );
+                })}
               </div>
             </div>
-            <div class="section">
-              <div class="container cc-education">
-                <div class="h4 text-center mb-4 title">Education</div>
-                <div class="card">
-                  <div class="row">
-                    <div
-                      class="col-md-3 bg-primary"
-                      data-aos="fade-right"
-                      data-aos-offset="50"
-                      data-aos-duration="500"
-                    >
-                      <div class="card-body cc-education-header">
-                        <p>2013 - 2015</p>
-                        <div class="h5">Master's Degree</div>
+            <div className="section">
+              <div className="container cc-education">
+                <div className="h4 text-center mb-4 title">Education</div>
+                {this.state.data.education.map((educ, i) => {
+                  return (
+                    <div className="card" key={i}>
+                      <div className="row">
+                        <div
+                          className="col-md-3 bg-primary"
+                          data-aos="fade-right"
+                          data-aos-offset="50"
+                          data-aos-duration="500"
+                        >
+                          <div className="card-body cc-education-header">
+                            <p>{educ.years}</p>
+                            <div className="h5">{educ.level}</div>
+                          </div>
+                        </div>
+                        <div
+                          className="col-md-9"
+                          data-aos="fade-left"
+                          data-aos-offset="50"
+                          data-aos-duration="500"
+                        >
+                          <div className="card-body">
+                            <div className="h5">{educ.school}</div>
+                            <p className="category">{educ.address}</p>
+                            <p>{educ.details}</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div
-                      class="col-md-9"
-                      data-aos="fade-left"
-                      data-aos-offset="50"
-                      data-aos-duration="500"
-                    >
-                      <div class="card-body">
-                        <div class="h5">Master of Information Technology</div>
-                        <p class="category">University of Computer Science</p>
-                        <p>
-                          Euismod massa scelerisque suspendisse fermentum
-                          habitant vitae ullamcorper magna quam iaculis,
-                          tristique sapien taciti mollis interdum sagittis
-                          libero nunc inceptos tellus, hendrerit vel eleifend
-                          primis lectus quisque cubilia sed mauris. Lacinia
-                          porta vestibulum diam integer quisque eros pulvinar
-                          curae, curabitur feugiat arcu vivamus parturient
-                          aliquet laoreet at, eu etiam pretium molestie
-                          ultricies sollicitudin dui.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="row">
-                    <div
-                      class="col-md-3 bg-primary"
-                      data-aos="fade-right"
-                      data-aos-offset="50"
-                      data-aos-duration="500"
-                    >
-                      <div class="card-body cc-education-header">
-                        <p>2009 - 2013</p>
-                        <div class="h5">Bachelor's Degree</div>
-                      </div>
-                    </div>
-                    <div
-                      class="col-md-9"
-                      data-aos="fade-left"
-                      data-aos-offset="50"
-                      data-aos-duration="500"
-                    >
-                      <div class="card-body">
-                        <div class="h5">Bachelor of Computer Science</div>
-                        <p class="category">University of Computer Science</p>
-                        <p>
-                          Euismod massa scelerisque suspendisse fermentum
-                          habitant vitae ullamcorper magna quam iaculis,
-                          tristique sapien taciti mollis interdum sagittis
-                          libero nunc inceptos tellus, hendrerit vel eleifend
-                          primis lectus quisque cubilia sed mauris. Lacinia
-                          porta vestibulum diam integer quisque eros pulvinar
-                          curae, curabitur feugiat arcu vivamus parturient
-                          aliquet laoreet at, eu etiam pretium molestie
-                          ultricies sollicitudin dui.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="row">
-                    <div
-                      class="col-md-3 bg-primary"
-                      data-aos="fade-right"
-                      data-aos-offset="50"
-                      data-aos-duration="500"
-                    >
-                      <div class="card-body cc-education-header">
-                        <p>2007 - 2009</p>
-                        <div class="h5">High School</div>
-                      </div>
-                    </div>
-                    <div
-                      class="col-md-9"
-                      data-aos="fade-left"
-                      data-aos-offset="50"
-                      data-aos-duration="500"
-                    >
-                      <div class="card-body">
-                        <div class="h5">Science and Mathematics</div>
-                        <p class="category">School of Secondary board</p>
-                        <p>
-                          Euismod massa scelerisque suspendisse fermentum
-                          habitant vitae ullamcorper magna quam iaculis,
-                          tristique sapien taciti mollis interdum sagittis
-                          libero nunc inceptos tellus, hendrerit vel eleifend
-                          primis lectus quisque cubilia sed mauris. Lacinia
-                          porta vestibulum diam integer quisque eros pulvinar
-                          curae, curabitur feugiat arcu vivamus parturient
-                          aliquet laoreet at, eu etiam pretium molestie
-                          ultricies sollicitudin dui.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                  );
+                })}
               </div>
             </div>
-            <div class="section" id="reference">
-              <div class="container cc-reference">
-                <div class="h4 mb-4 text-center title">References</div>
-                <div class="card" data-aos="zoom-in">
+            <div className="section" id="reference">
+              <div className="container cc-reference">
+                <div className="h4 mb-4 text-center title">References</div>
+                <div className="card" data-aos="zoom-in">
                   <div
-                    class="carousel slide"
+                    className="carousel slide"
                     id="cc-Indicators"
                     data-ride="carousel"
                   >
-                    <ol class="carousel-indicators">
+                    <ol className="carousel-indicators">
                       <li
-                        class="active"
+                        className="active"
                         data-target="#cc-Indicators"
                         data-slide-to="0"
                       />
                       <li data-target="#cc-Indicators" data-slide-to="1" />
                       <li data-target="#cc-Indicators" data-slide-to="2" />
                     </ol>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <div class="row">
-                          <div class="col-lg-2 col-md-3 cc-reference-header">
+                    <div className="carousel-inner">
+                      <div className="carousel-item active">
+                        <div className="row">
+                          <div className="col-lg-2 col-md-3 cc-reference-header">
                             <img
                               src="images/reference-image-1.jpg"
-                              alt="Image"
+                              alt="Aiyana"
                             />
-                            <div class="h5 pt-2">Aiyana</div>
-                            <p class="category">CEO / WEBM</p>
+                            <div className="h5 pt-2">Aiyana</div>
+                            <p className="category">CEO / WEBM</p>
                           </div>
-                          <div class="col-lg-10 col-md-9">
+                          <div className="col-lg-10 col-md-9">
                             <p>
                               {" "}
                               Habitasse venenatis commodo tempor eleifend arcu
@@ -623,19 +336,18 @@ class App extends Component {
                           </div>
                         </div>
                       </div>
-                      <div class="carousel-item">
-                        <div class="row">
-                          <div class="col-lg-2 col-md-3 cc-reference-header">
+                      <div className="carousel-item">
+                        <div className="row">
+                          <div className="col-lg-2 col-md-3 cc-reference-header">
                             <img
                               src="images/reference-image-2.jpg"
-                              alt="Image"
+                              alt="Braiden"
                             />
-                            <div class="h5 pt-2">Braiden</div>
-                            <p class="category">CEO / Creativem</p>
+                            <div className="h5 pt-2">Braiden</div>
+                            <p className="category">CEO / Creativem</p>
                           </div>
-                          <div class="col-lg-10 col-md-9">
+                          <div className="col-lg-10 col-md-9">
                             <p>
-                              {" "}
                               Habitasse venenatis commodo tempor eleifend arcu
                               sociis sollicitudin ante pulvinar ad, est porta
                               cras erat ullamcorper volutpat metus duis platea
@@ -649,17 +361,17 @@ class App extends Component {
                           </div>
                         </div>
                       </div>
-                      <div class="carousel-item">
-                        <div class="row">
-                          <div class="col-lg-2 col-md-3 cc-reference-header">
+                      <div className="carousel-item">
+                        <div className="row">
+                          <div className="col-lg-2 col-md-3 cc-reference-header">
                             <img
                               src="images/reference-image-3.jpg"
-                              alt="Image"
+                              alt="Alexandra"
                             />
-                            <div class="h5 pt-2">Alexander</div>
-                            <p class="category">CEO / Webnote</p>
+                            <div className="h5 pt-2">Alexander</div>
+                            <p className="category">CEO / Webnote</p>
                           </div>
-                          <div class="col-lg-10 col-md-9">
+                          <div className="col-lg-10 col-md-9">
                             <p>
                               {" "}
                               Habitasse venenatis commodo tempor eleifend arcu
@@ -680,38 +392,36 @@ class App extends Component {
                 </div>
               </div>
             </div>
-            <div class="section" id="contact">
+            <div className="section" id="contact">
               <div
-                class="cc-contact-information"
+                className="cc-contact-information"
                 style={{
-                  "background-image":
-                    " url('https://image.ibb.co/fetgZK/laptop.jpg')"
+                  backgroundImage: `url(${
+                    this.state.data.pageOption.backgroundImageBot
+                  })`
                 }}
               >
-                <div class="container">
-                  <div class="cc-contact">
-                    <div class="row">
-                      <div class="col-md-9">
-                        <div class="card mb-0" data-aos="zoom-in">
-                          <div class="h4 text-center title">Contact Me</div>
-                          <div class="row">
-                            <div class="col-md-6">
-                              <div class="card-body">
+                <div className="container">
+                  <div className="cc-contact">
+                    <div className="row">
+                      <div className="col-md-9">
+                        <div className="card mb-0" data-aos="zoom-in">
+                          <div className="h4 text-center title">Contact Me</div>
+                          <div className="row">
+                            <div className="col-md-6">
+                              <div className="card-body">
                                 <form
                                   action="https://formspree.io/your@email.com"
                                   method="POST"
                                 >
-                                  <div class="p pb-3">
+                                  <div className="p pb-3">
                                     <strong>Feel free to contact me </strong>
                                   </div>
-                                  <div class="row mb-3">
-                                    <div class="col">
-                                      <div class="input-group">
-                                        <span class="input-group-addon">
-                                          <i class="fa fa-user-circle" />
-                                        </span>
+                                  <div className="row mb-3">
+                                    <div className="col">
+                                      <div className="input-group">
                                         <input
-                                          class="form-control"
+                                          className="form-control"
                                           type="text"
                                           name="name"
                                           placeholder="Name"
@@ -720,14 +430,11 @@ class App extends Component {
                                       </div>
                                     </div>
                                   </div>
-                                  <div class="row mb-3">
-                                    <div class="col">
-                                      <div class="input-group">
-                                        <span class="input-group-addon">
-                                          <i class="fa fa-file-text" />
-                                        </span>
+                                  <div className="row mb-3">
+                                    <div className="col">
+                                      <div className="input-group">
                                         <input
-                                          class="form-control"
+                                          className="form-control"
                                           type="text"
                                           name="Subject"
                                           placeholder="Subject"
@@ -736,14 +443,11 @@ class App extends Component {
                                       </div>
                                     </div>
                                   </div>
-                                  <div class="row mb-3">
-                                    <div class="col">
-                                      <div class="input-group">
-                                        <span class="input-group-addon">
-                                          <i class="fa fa-envelope" />
-                                        </span>
+                                  <div className="row mb-3">
+                                    <div className="col">
+                                      <div className="input-group">
                                         <input
-                                          class="form-control"
+                                          className="form-control"
                                           type="email"
                                           name="_replyto"
                                           placeholder="E-mail"
@@ -752,11 +456,11 @@ class App extends Component {
                                       </div>
                                     </div>
                                   </div>
-                                  <div class="row mb-3">
-                                    <div class="col">
-                                      <div class="form-group">
+                                  <div className="row mb-3">
+                                    <div className="col">
+                                      <div className="form-group">
                                         <textarea
-                                          class="form-control"
+                                          className="form-control"
                                           name="message"
                                           placeholder="Your Message"
                                           required="required"
@@ -764,10 +468,10 @@ class App extends Component {
                                       </div>
                                     </div>
                                   </div>
-                                  <div class="row">
-                                    <div class="col">
+                                  <div className="row">
+                                    <div className="col">
                                       <button
-                                        class="btn btn-primary"
+                                        className="btn btn-primary"
                                         type="submit"
                                       >
                                         Send
@@ -777,22 +481,22 @@ class App extends Component {
                                 </form>
                               </div>
                             </div>
-                            <div class="col-md-6">
-                              <div class="card-body">
-                                <p class="mb-0">
-                                  <strong>Address </strong>
-                                </p>
-                                <p class="pb-2">
-                                  140, City Center, New York, U.S.A
-                                </p>
-                                <p class="mb-0">
-                                  <strong>Phone</strong>
-                                </p>
-                                <p class="pb-2">+1718-111-0011</p>
-                                <p class="mb-0">
-                                  <strong>Email</strong>
-                                </p>
-                                <p>anthony@company.com</p>
+                            <div className="col-md-6">
+                              <div className="card-body">
+                                {this.state.data.basicInfo.map((info, i) => {
+                                  return (
+                                    <div className="row mt-3" key={i}>
+                                      <div className="col-sm-4">
+                                        <strong className="text-uppercase">
+                                          {info.title}
+                                        </strong>
+                                      </div>
+                                      <div className="col-sm-8">
+                                        {info.value}
+                                      </div>
+                                    </div>
+                                  );
+                                })}
                               </div>
                             </div>
                           </div>
@@ -805,30 +509,21 @@ class App extends Component {
             </div>
           </div>
         </div>
-        <footer class="footer">
-          <div class="container text-center">
-            <a class="cc-facebook btn btn-link" href="#">
-              <i class="fa fa-facebook fa-2x " aria-hidden="true" />
-            </a>
-            <a class="cc-twitter btn btn-link " href="#">
-              <i class="fa fa-twitter fa-2x " aria-hidden="true" />
-            </a>
-            <a class="cc-google-plus btn btn-link" href="#">
-              <i class="fa fa-google-plus fa-2x" aria-hidden="true" />
-            </a>
-            <a class="cc-instagram btn btn-link" href="#">
-              <i class="fa fa-instagram fa-2x " aria-hidden="true" />
-            </a>
+        <footer className="footer">
+          <div className="container text-center">
+            {this.state.data.links.map((link, i) => {
+              return (
+                <a className="btn btn-link" href={`${link.link}`} key={i}>
+                  <i className={`${link.icon} fa-3x `} aria-hidden="true" />
+                </a>
+              );
+            })}
           </div>
-          <div class="h4 title text-center">Anthony Barnett</div>
-          <div class="text-center text-muted">
+          <div className="h4 title text-center">{this.state.data.name}</div>
+          <div className="text-center text-muted">
             <p>
-              &copy; Creative CV. All rights reserved.
+              &copy; 2018. All rights reserved.
               <br />
-              Design -{" "}
-              <a class="credit" href="https://templateflip.com" target="_blank">
-                TemplateFlip
-              </a>
             </p>
           </div>
         </footer>
