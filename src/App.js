@@ -24,7 +24,7 @@ class App extends Component {
             >
               <div className="container">
                 <div className="navbar-translate">
-                  <a className="navbar-brand" rel="tooltip">
+                  <a className="navbar-brand" rel="tooltip" href="#">
                     Profile
                   </a>
                   <button
