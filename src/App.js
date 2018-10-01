@@ -113,8 +113,9 @@ class App extends Component {
                         className="btn btn-primary"
                         data-aos="zoom-in"
                         data-aos-anchor="data-aos-anchor"
+                        href={`${this.state.data.resume}`}
                       >
-                        Download CV
+                        View Resume
                       </a>
                     </div>
                   </div>
@@ -312,41 +313,19 @@ class App extends Component {
                     <div className="carousel-inner">
                       <div className="carousel-item active">
                         <div className="row">
-                          <div className="col-lg-2 col-md-3 cc-reference-header">
+                          <div className="col-lg-3 col-md-4 cc-reference-header">
                             <img
                               src="images/reference-image-1.jpg"
-                              alt="Aiyana"
+                              alt="Dr. Farah Sombilon"
                             />
-                            <div className="h5 pt-2">Aiyana</div>
-                            <p className="category">CEO / WEBM</p>
+                            <div className="h5 pt-2">Dr. Rigan Ap-apid </div>
+                            <p className="category">fdsombilon@swu.edu.ph</p>
                           </div>
-                          <div className="col-lg-10 col-md-9">
+                          <div className="col-lg-9 col-md-8">
                             <p>
-                              {" "}
-                              Habitasse venenatis commodo tempor eleifend arcu
-                              sociis sollicitudin ante pulvinar ad, est porta
-                              cras erat ullamcorper volutpat metus duis platea
-                              convallis, tortor primis ac quisque etiam luctus
-                              nisl nullam fames. Ligula purus suscipit tempus
-                              nascetur curabitur donec nam ullamcorper, laoreet
-                              nullam mauris dui aptent facilisis neque elementum
-                              ac, risus semper felis parturient fringilla
-                              rhoncus eleifend.
+                              Faculty Member College of IT & Engineering
+                              Southwestern University PHINMA, Cebu City
                             </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="carousel-item">
-                        <div className="row">
-                          <div className="col-lg-2 col-md-3 cc-reference-header">
-                            <img
-                              src="images/reference-image-2.jpg"
-                              alt="Braiden"
-                            />
-                            <div className="h5 pt-2">Braiden</div>
-                            <p className="category">CEO / Creativem</p>
-                          </div>
-                          <div className="col-lg-10 col-md-9">
                             <p>
                               Habitasse venenatis commodo tempor eleifend arcu
                               sociis sollicitudin ante pulvinar ad, est porta
@@ -363,17 +342,49 @@ class App extends Component {
                       </div>
                       <div className="carousel-item">
                         <div className="row">
-                          <div className="col-lg-2 col-md-3 cc-reference-header">
+                          <div className="col-lg-3 col-md-4 cc-reference-header">
                             <img
-                              src="images/reference-image-3.jpg"
-                              alt="Alexandra"
+                              src="images/reference-image-1.jpg"
+                              alt="Dr. Zandra Salas"
                             />
-                            <div className="h5 pt-2">Alexander</div>
-                            <p className="category">CEO / Webnote</p>
+                            <div className="h5 pt-2">Dr. Zandra Salas</div>
+                            <p className="category">zasalas@swu.edu.ph</p>
                           </div>
-                          <div className="col-lg-10 col-md-9">
+                          <div className="col-lg-9 col-md-8">
                             <p>
-                              {" "}
+                              Faculty Member College of IT & Engineering
+                              Southwestern University PHINMA, Cebu City
+                            </p>
+                            <p>
+                              Habitasse venenatis commodo tempor eleifend arcu
+                              sociis sollicitudin ante pulvinar ad, est porta
+                              cras erat ullamcorper volutpat metus duis platea
+                              convallis, tortor primis ac quisque etiam luctus
+                              nisl nullam fames. Ligula purus suscipit tempus
+                              nascetur curabitur donec nam ullamcorper, laoreet
+                              nullam mauris dui aptent facilisis neque elementum
+                              ac, risus semper felis parturient fringilla
+                              rhoncus eleifend.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="carousel-item">
+                        <div className="row">
+                          <div className="col-lg-3 col-md-4 cc-reference-header">
+                            <img
+                              src="images/reference-image-1.jpg"
+                              alt="Dr. Rigan Ap-apid "
+                            />
+                            <div className="h5 pt-2">Dr. Rigan Ap-apid </div>
+                            <p className="category">rpap-apid@swu.edu.ph</p>
+                          </div>
+                          <div className="col-lg-9 col-md-8">
+                            <p>
+                              Dean College of IT & Engineering Southwestern
+                              University PHINMA, Cebu City
+                            </p>
+                            <p>
                               Habitasse venenatis commodo tempor eleifend arcu
                               sociis sollicitudin ante pulvinar ad, est porta
                               cras erat ullamcorper volutpat metus duis platea
