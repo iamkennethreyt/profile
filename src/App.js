@@ -104,7 +104,9 @@ class App extends Component {
                         </a>
                       </div>
                       <div className="h2 title">{this.state.data.name}</div>
-                      <p className="category text-white" />
+                      <p class="category text-white">
+                        Web Developer, Graphic Designer
+                      </p>
                       <a
                         className="btn btn-primary smooth-scroll mr-2"
                         href="#contact"
@@ -153,8 +155,8 @@ class App extends Component {
                       <div className="card-body">
                         <div className="h4 mt-0 title">About</div>
                         <p>
-                          Hello! I am {this.state.data.name}. Web Developer,
-                          Graphic Designer and Photographer.
+                          Hello! I am {this.state.data.name}. Web Developer and
+                          a Graphic Designer.
                         </p>
                         <p>{this.state.data.aboutme}</p>
                       </div>
@@ -238,16 +240,6 @@ class App extends Component {
                           <a
                             class="nav-link active"
                             data-toggle="tab"
-                            href="#web-development"
-                            role="tablist"
-                          >
-                            <i class="fa fa-laptop" aria-hidden="true" />
-                          </a>
-                        </li>
-                        <li class="nav-item">
-                          <a
-                            class="nav-link"
-                            data-toggle="tab"
                             href="#graphic-design"
                             role="tablist"
                           >
@@ -258,10 +250,10 @@ class App extends Component {
                           <a
                             class="nav-link"
                             data-toggle="tab"
-                            href="#Photography"
+                            href="#web-development"
                             role="tablist"
                           >
-                            <i class="fa fa-camera" aria-hidden="true" />
+                            <i class="fa fa-laptop" aria-hidden="true" />
                           </a>
                         </li>
                       </ul>
@@ -269,89 +261,42 @@ class App extends Component {
                   </div>
                 </div>
                 <div class="tab-content gallery mt-5">
-                  <div class="tab-pane active" id="web-development">
+                  <div
+                    class="tab-pane active"
+                    id="graphic-design"
+                    role="tabpanel"
+                  >
                     <div class="ml-auto mr-auto">
                       <div class="row">
-                        <div class="col-md-6">
-                          <div
-                            class="cc-porfolio-image img-raised"
-                            data-aos="fade-up"
-                            data-aos-anchor-placement="top-bottom"
-                          >
-                            <a href="#web-development">
-                              <figure class="cc-effect">
-                                <img
-                                  src="https://image.ibb.co/deLJeK/coding.jpg"
-                                  alt="Image"
-                                />
-                                <figcaption>
-                                  <div class="h4">Recent Project</div>
-                                  <p>Web Development</p>
-                                </figcaption>
-                              </figure>
-                            </a>
-                          </div>
-                          <div
-                            class="cc-porfolio-image img-raised"
-                            data-aos="fade-up"
-                            data-aos-anchor-placement="top-bottom"
-                          >
-                            <a href="#web-development">
-                              <figure class="cc-effect">
-                                <img
-                                  src="https://image.ibb.co/deLJeK/coding.jpg"
-                                  alt="Image"
-                                />
-                                <figcaption>
-                                  <div class="h4">Startup Project</div>
-                                  <p>Web Development</p>
-                                </figcaption>
-                              </figure>
-                            </a>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div
-                            class="cc-porfolio-image img-raised"
-                            data-aos="fade-up"
-                            data-aos-anchor-placement="top-bottom"
-                          >
-                            <a href="#web-development">
-                              <figure class="cc-effect">
-                                <img
-                                  src="https://image.ibb.co/deLJeK/coding.jpg"
-                                  alt="Image"
-                                />
-                                <figcaption>
-                                  <div class="h4">Food Order Project</div>
-                                  <p>Web Development</p>
-                                </figcaption>
-                              </figure>
-                            </a>
-                          </div>
-                          <div
-                            class="cc-porfolio-image img-raised"
-                            data-aos="fade-up"
-                            data-aos-anchor-placement="top-bottom"
-                          >
-                            <a href="#web-development">
-                              <figure class="cc-effect">
-                                <img
-                                  src="https://image.ibb.co/deLJeK/coding.jpg"
-                                  alt="Image"
-                                />
-                                <figcaption>
-                                  <div class="h4">Web Advertising Project</div>
-                                  <p>Web Development</p>
-                                </figcaption>
-                              </figure>
-                            </a>
-                          </div>
-                        </div>
+                        {this.state.data.portfolios.map((portfolio, i) => {
+                          return (
+                            <div class="col-md-6" key={i}>
+                              <div
+                                class="cc-porfolio-image img-raised"
+                                data-aos="fade-up"
+                                data-aos-anchor-placement="top-bottom"
+                              >
+                                <a href="#graphic-design">
+                                  <figure class="cc-effect">
+                                    <img
+                                      src={`${portfolio.link}`}
+                                      alt="Image"
+                                    />
+                                    <figcaption>
+                                      <div class="h4">{portfolio.details}</div>
+                                      <p>{portfolio.activity}</p>
+                                    </figcaption>
+                                  </figure>
+                                </a>
+                              </div>
+                            </div>
+                          );
+                        })}
                       </div>
                     </div>
                   </div>
-                  <div class="tab-pane" id="graphic-design" role="tabpanel">
+
+                  <div class="tab-pane" id="web-development">
                     <div class="ml-auto mr-auto">
                       <div class="row">
                         <div class="col-md-6">
@@ -360,153 +305,15 @@ class App extends Component {
                             data-aos="fade-up"
                             data-aos-anchor-placement="top-bottom"
                           >
-                            <a href="#graphic-design">
+                            <a href="#web-development">
                               <figure class="cc-effect">
                                 <img
                                   src="https://image.ibb.co/deLJeK/coding.jpg"
                                   alt="Image"
                                 />
                                 <figcaption>
-                                  <div class="h4">Triangle Pattern</div>
-                                  <p>Graphic Design</p>
-                                </figcaption>
-                              </figure>
-                            </a>
-                          </div>
-                          <div
-                            class="cc-porfolio-image img-raised"
-                            data-aos="fade-up"
-                            data-aos-anchor-placement="top-bottom"
-                          >
-                            <a href="#graphic-design">
-                              <figure class="cc-effect">
-                                <img
-                                  src="https://image.ibb.co/deLJeK/coding.jpg"
-                                  alt="Image"
-                                />
-                                <figcaption>
-                                  <div class="h4">Abstract Umbrella</div>
-                                  <p>Graphic Design</p>
-                                </figcaption>
-                              </figure>
-                            </a>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div
-                            class="cc-porfolio-image img-raised"
-                            data-aos="fade-up"
-                            data-aos-anchor-placement="top-bottom"
-                          >
-                            <a href="#graphic-design">
-                              <figure class="cc-effect">
-                                <img
-                                  src="https://image.ibb.co/deLJeK/coding.jpg"
-                                  alt="Image"
-                                />
-                                <figcaption>
-                                  <div class="h4">Cube Surface Texture</div>
-                                  <p>Graphic Design</p>
-                                </figcaption>
-                              </figure>
-                            </a>
-                          </div>
-                          <div
-                            class="cc-porfolio-image img-raised"
-                            data-aos="fade-up"
-                            data-aos-anchor-placement="top-bottom"
-                          >
-                            <a href="#graphic-design">
-                              <figure class="cc-effect">
-                                <img
-                                  src="https://image.ibb.co/deLJeK/coding.jpg"
-                                  alt="Image"
-                                />
-                                <figcaption>
-                                  <div class="h4">Abstract Line</div>
-                                  <p>Graphic Design</p>
-                                </figcaption>
-                              </figure>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="tab-pane" id="Photography" role="tabpanel">
-                    <div class="ml-auto mr-auto">
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div
-                            class="cc-porfolio-image img-raised"
-                            data-aos="fade-up"
-                            data-aos-anchor-placement="top-bottom"
-                          >
-                            <a href="#Photography">
-                              <figure class="cc-effect">
-                                <img
-                                  src="https://image.ibb.co/deLJeK/coding.jpg"
-                                  alt="Image"
-                                />
-                                <figcaption>
-                                  <div class="h4">Photoshoot</div>
-                                  <p>Photography</p>
-                                </figcaption>
-                              </figure>
-                            </a>
-                          </div>
-                          <div
-                            class="cc-porfolio-image img-raised"
-                            data-aos="fade-up"
-                            data-aos-anchor-placement="top-bottom"
-                          >
-                            <a href="#Photography">
-                              <figure class="cc-effect">
-                                <img
-                                  src="https://image.ibb.co/deLJeK/coding.jpg"
-                                  alt="Image"
-                                />
-                                <figcaption>
-                                  <div class="h4">Wedding Photoshoot</div>
-                                  <p>Photography</p>
-                                </figcaption>
-                              </figure>
-                            </a>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div
-                            class="cc-porfolio-image img-raised"
-                            data-aos="fade-up"
-                            data-aos-anchor-placement="top-bottom"
-                          >
-                            <a href="#Photography">
-                              <figure class="cc-effect">
-                                <img
-                                  src="https://image.ibb.co/deLJeK/coding.jpg"
-                                  alt="Image"
-                                />
-                                <figcaption>
-                                  <div class="h4">Beach Photoshoot</div>
-                                  <p>Photography</p>
-                                </figcaption>
-                              </figure>
-                            </a>
-                          </div>
-                          <div
-                            class="cc-porfolio-image img-raised"
-                            data-aos="fade-up"
-                            data-aos-anchor-placement="top-bottom"
-                          >
-                            <a href="#Photography">
-                              <figure class="cc-effect">
-                                <img
-                                  src="https://image.ibb.co/deLJeK/coding.jpg"
-                                  alt="Image"
-                                />
-                                <figcaption>
-                                  <div class="h4">Nature Photoshoot</div>
-                                  <p>Photography</p>
+                                  <div class="h4">DNA Micro Software Inc.</div>
+                                  <p>Web Development</p>
                                 </figcaption>
                               </figure>
                             </a>

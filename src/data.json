@@ -1,13 +1,41 @@
 {
   "name": "Kenneth Rey Tamis",
   "title": "Web Developer",
-  "aboutme": "Creative CV is a HTML resume template for professionals. Built with Bootstrap 4, Now UI Kit and FontAwesome, this modern and responsive design template is perfect to showcase your portfolio, skills and experience",
+  "aboutme": "Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna quam iaculis, tristique sapien taciti mollis interdum sagittis libero nunc inceptos tellus, hendrerit vel eleifend primis lectus quisque cubilia sed mauris. Lacinia porta vestibulum diam integer quisque eros pulvinar curae, curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium molestie ultricies sollicitudin dui",
   "profileImage": "https://image.ibb.co/d4EAuz/Tamis_Kenneth_Rey.jpg",
   "resume": "https://drive.google.com/file/d/1Svm4nHkOomdJ78zx9S45clNGXMMaloTB/view",
   "pageOption": {
     "backgroundImageTop": "https://image.ibb.co/gWS27K/photo_1517694712202_14dd9538aa97.jpg",
     "backgroundImageBot": "https://image.ibb.co/fetgZK/laptop.jpg"
   },
+
+  "portfolios": [
+    {
+      "link": "https://image.ibb.co/e67cDe/Graduation_Pictorial.jpg",
+      "details": "Graduation Pictorial",
+      "activity": "Curricular Activity"
+    },
+    {
+      "link": "https://image.ibb.co/mzNxeK/ppc2017.jpg",
+      "details": "Philippine Programming Philippines Certificate",
+      "activity": "Curricular Activity"
+    },
+    {
+      "link": "https://image.ibb.co/dsig6z/PISCON.jpg",
+      "details": "2nd Phillipine Impact Sourcing Conference 2018",
+      "activity": "Curricular Activity"
+    },
+    {
+      "link": "https://image.ibb.co/jtpM6z/capstone2018.jpg",
+      "details": "Capstone Thesis final defense",
+      "activity": "Curricular Activity"
+    },
+    {
+      "link": "https://image.ibb.co/mKeM6z/DEANSLIST.jpg",
+      "details": "Academic Excellence Award",
+      "activity": "Curricular Activity"
+    }
+  ],
   "links": [
     {
       "title": "Follow me on Facebook",
