@@ -122,24 +122,40 @@
       "percent": "75"
     },
     {
-      "skills": "photoshop",
-      "percent": "71"
+      "skills": "Windows Forms App (.Net framework)",
+      "percent": "75"
     },
     {
-      "skills": "react-md",
+      "skills": "Adobe Photoshop & Illustrator",
+      "percent": "50"
+    },
+    {
+      "skills": "Material UI",
+      "percent": "50"
+    },
+    {
+      "skills": "angularjs",
+      "percent": "50"
+    },
+    {
+      "skills": "nodejs",
+      "percent": "50"
+    },
+    {
+      "skills": "react native",
       "percent": "50"
     },
     {
       "skills": "firebase",
-      "percent": "50"
+      "percent": "30"
     },
     {
       "skills": "rest api",
-      "percent": "50"
+      "percent": "30"
     },
     {
       "skills": "wordpress",
-      "percent": "48"
+      "percent": "30"
     }
   ],
   "references": [
